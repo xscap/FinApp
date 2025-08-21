@@ -1,35 +1,42 @@
-import { useState } from 'react'
-import reactLogo from './assets/react.svg'
-import viteLogo from '/vite.svg'
-import './App.css'
+import React, { useState } from "react";
+import { BrowserRouter, Routes, Route } from "react-router-dom";
+import Header from "./Components/Header";
+import Sidebar from "./Components/Sidebar";
+import Dashboard from "./Dashboard/Dashboard";
+import Reports from "./Reports/Reports";
+import styles from "./App.module.css";
 
-function App() {
-  const [count, setCount] = useState(0)
+const App = () => {
+  const [sidebarOpen, setSidebarOpen] = useState(false);
+
+  const handleSidebarToggle = () => setSidebarOpen((open) => !open);
 
   return (
-    <>
-      <div>
-        <a href="https://vite.dev" target="_blank">
-          <img src={viteLogo} className="logo" alt="Vite logo" />
-        </a>
-        <a href="https://react.dev" target="_blank">
-          <img src={reactLogo} className="logo react" alt="React logo" />
-        </a>
+    <BrowserRouter>
+      <div className={styles.appContainer}>
+        <Header onMenuClick={handleSidebarToggle} />
+        <div className={styles.body}>
+          <Sidebar open={sidebarOpen} onClose={() => setSidebarOpen(false)} />
+          <Routes>
+            <Route path="/" element={<Dashboard sidebarOpen={sidebarOpen} />} />
+            <Route path="/reports" element={<Reports />} />
+          </Routes>
+        </div>
+        {/* Overlay for mobile/blur effect */}
+        {sidebarOpen && (
+          <div
+            className={styles.overlay}
+            onClick={() => setSidebarOpen(false)}
+          />
+        )}
       </div>
-      <h1>Vite + React</h1>
-      <div className="card">
-        <button onClick={() => setCount((count) => count + 1)}>
-          count is {count}
-        </button>
-        <p>
-          Edit <code>src/App.jsx</code> and save to test HMR
-        </p>
-      </div>
-      <p className="read-the-docs">
-        Click on the Vite and React logos to learn more
-      </p>
-    </>
-  )
-}
+    </BrowserRouter>
+  );
+};
 
-export default App
+export default App;
+
+
+
+
+
