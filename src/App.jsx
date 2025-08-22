@@ -1,42 +1,32 @@
-import React, { useState } from "react";
-import { BrowserRouter, Routes, Route } from "react-router-dom";
-import Header from "./Components/Header";
-import Sidebar from "./Components/Sidebar";
-import Dashboard from "./Dashboard/Dashboard";
-import Reports from "./Reports/Reports";
-import styles from "./App.module.css";
+import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
+import WelcomeMessage from "./Authentication/Welcome/WelcomeMessage";
+import LoginPage from "./Authentication/Login/LoginPage";
+import RegisterPage from "./Authentication/Register/RegisterPage";
+import InvoiceViewer from "./Layout/Display/InvoiceViewer";
+import ReportViewer from "./Layout/Display/ReportViewer";
+import CustomerViewer from "./Layout/Display/CustomerViewer";
+import DashboardViewer from "./Layout/Display/DashboardViewer";
+import PaymentViewer from "./Layout/Display/PaymentViewer";
+import "./App.css";
 
-const App = () => {
-  const [sidebarOpen, setSidebarOpen] = useState(false);
-
-  const handleSidebarToggle = () => setSidebarOpen((open) => !open);
-
+function App() {
   return (
-    <BrowserRouter>
-      <div className={styles.appContainer}>
-        <Header onMenuClick={handleSidebarToggle} />
-        <div className={styles.body}>
-          <Sidebar open={sidebarOpen} onClose={() => setSidebarOpen(false)} />
-          <Routes>
-            <Route path="/" element={<Dashboard sidebarOpen={sidebarOpen} />} />
-            <Route path="/reports" element={<Reports />} />
-          </Routes>
-        </div>
-        {/* Overlay for mobile/blur effect */}
-        {sidebarOpen && (
-          <div
-            className={styles.overlay}
-            onClick={() => setSidebarOpen(false)}
-          />
-        )}
-      </div>
-    </BrowserRouter>
+    <>
+      <Router>
+        <Routes>
+          <Route path="/" element={<DashboardViewer/>}/>   // Home route with Navbar - will change based on the FireBase integration , mainly Authentication and Cloud Firestore
+          <Route path="/login" element={<LoginPage />} />
+          <Route path="/register" element={<RegisterPage />} />
+          <Route path = "/invoices" element={<InvoiceViewer />} />
+          <Route path = "/reports" element={<ReportViewer />} />
+          <Route path = "/customers" element={<CustomerViewer />} />
+          <Route path = "/payments" element={<PaymentViewer />} />
+          
+        </Routes>
+      </Router>
+    </>
   );
-};
+}
 
 export default App;
-
-
-
-
 

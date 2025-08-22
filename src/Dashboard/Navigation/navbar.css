@@ -1,0 +1,75 @@
+/* Reset some default browser styles */
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  font-family: 'Segoe UI', sans-serif;
+}
+
+/* Navbar wrapper */
+.groww-navbar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background-color: #ffffff;
+  padding: 0 20px;
+  height: 64px;
+  border-bottom: 1px solid #e6e6e6;
+  box-shadow: 0 2px 5px rgba(0,0,0,0.05);
+  position: sticky;
+  top: 0;
+  z-index: 999;
+}
+
+/* Left section with menu items */
+.nav-left {
+  display: flex;
+  position: relative;
+  flex: 1;
+  max-width: 700px;
+}
+
+/* Individual nav item */
+.nav-item {
+  flex: 1;
+  background: none;
+  border: none;
+  outline: none;
+  font-size: 1rem;
+  padding: 16px 12px;
+  cursor: pointer;
+  color: #555;
+  font-weight: 500;
+  transition: color 0.3s ease;
+  text-align: center;
+  position: relative;
+}
+
+/* Active item style */
+.nav-item.active {
+  color: #00b386;
+  font-weight: 600;
+}
+
+/* Green underline indicator */
+.nav-indicator {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  height: 2px;
+  width: 20%; /* 100% / 5 menu items = 20% */
+  background-color: #00b386;
+  transition: transform 0.3s ease;
+  border-radius: 2px;
+}
+
+/* Right section */
+.nav-right {
+  padding-left: 24px;
+  font-weight: 500;
+  color: #333;
+  white-space: nowrap;
+}
