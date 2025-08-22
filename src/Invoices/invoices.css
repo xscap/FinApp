@@ -1,0 +1,73 @@
+.invoice-container {
+  padding: 20px;
+  font-family: Arial, sans-serif;
+
+}
+.invoice-header{
+    display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 8px 12px;   /* smaller padding */
+  background: #f9f9f9; /* light background */
+  border-bottom: 1px solid #ddd;
+}
+
+.create-btn {
+ background: #000;
+  color: white;
+  padding: 8px 15px;
+  border-radius: 8px;
+  border: none;
+  cursor: pointer;
+}
+
+.success-message {
+  background: #d4edda;
+  color: #155724;
+  padding: 10px;
+  border-radius: 8px;
+  margin-top: 10px;
+}
+
+.overview {
+  display: flex;
+  gap: 20px;
+  margin: 20px 0;
+}
+
+.card {
+  flex: 1;
+  background: #fff;
+  border: 1px solid #eee;
+  padding: 20px;
+  border-radius: 8px;
+  text-align: center;
+}
+
+table {
+  width: 100%;
+  border-collapse: collapse;
+  margin-top: 15px;
+}
+
+th, td {
+  padding: 12px;
+  border-bottom: 1px solid #ddd;
+  text-align: left;
+}
+
+.status {
+  padding: 5px 10px;
+  border-radius: 12px;
+  font-size: 12px;
+}
+
+.status.paid {
+  background: #e0f8e9;
+  color: #2a7d2e;
+}
+
+.status.outstanding {
+  background: #fff3cd;
+  color: #856404;
+}

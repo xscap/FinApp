@@ -1,10 +1,6 @@
-import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
-
-import ReportViewer from "./Layout/Display/ReportViewer";
-
-import DashboardViewer from "./Layout/Display/DashboardViewer";
 
 
+import './App.css'
 
 function App() {
   return (
