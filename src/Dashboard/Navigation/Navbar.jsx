@@ -1,5 +1,5 @@
 import React, { useState } from 'react';
-import './Navbar.css';
+import './navbar.css';
 
 const menuItems = ['Home', 'Markets', 'Portfolio', 'Invest', 'More'];
 
