@@ -1,0 +1,32 @@
+[
+  {
+    "date": "2025-08-16",
+    "description": "Payment to Vendor",
+    "amount": "$5000",
+    "status": "Paid"
+  },
+  {
+    "date": "2025-08-15",
+    "description": "Refund Received",
+    "amount": "$1200",
+    "status": "Pending"
+  },
+  {
+    "date": "2025-08-14",
+    "description": "Invoice Paid",
+    "amount": "$3000",
+    "status": "Paid"
+  },
+  {
+    "date": "2025-08-15",
+    "description": "Refund Received",
+    "amount": "$1200",
+    "status": "Pending"
+  },
+  {
+    "date": "2025-08-14",
+    "description": "Invoice Paid",
+    "amount": "$3000",
+    "status": "Paid"
+  }
+]
