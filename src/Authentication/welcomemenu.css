@@ -1,0 +1,122 @@
+/* Welcome.css */
+
+/* Typing effect for the title */
+.welcome-title {
+  font-size: 3rem;
+  margin-bottom: 40px;
+  white-space: nowrap;
+  overflow: hidden;
+  border-right: 4px solid #fff;
+  width: 22ch; /* Adjust depending on text length */
+  animation: typing 3s steps(22) forwards, blinkCaret 0.75s step-end infinite;
+  font-family: 'Courier New', Courier, monospace;
+  color: #fff;
+}
+
+/* Typing keyframes */
+@keyframes typing {
+  from { width: 0 }
+  to { width: 22ch }
+}
+
+@keyframes blinkCaret {
+  0%, 100% { border-color: transparent }
+  50% { border-color: white }
+}
+
+/* Other container and button styles */
+
+.welcome-container {
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  background: linear-gradient(135deg, #6a11cb, #2575fc);
+  color: #fff;
+  text-align: center;
+  padding: 20px;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+.button-group {
+  display: flex;
+  gap: 20px;
+}
+
+.animated-button {
+  font-size: 1.2rem;
+  padding: 14px 40px;
+  outline: none;
+  border: none;
+  border-radius: 30px;
+  cursor: pointer;
+  font-weight: 600;
+  transition: background-color 0.3s ease, color 0.3s ease;
+  box-shadow: 0 5px 15px rgba(0,0,0,0.3);
+}
+
+.animated-button:hover {
+  animation: buttonHoverPulse 1.2s infinite;
+}
+
+.login-button {
+  background-color: #ffffffaa;
+  color: #2575fc;
+}
+
+.login-button:hover {
+  background-color: #ffffff;
+  color: #0056b3;
+}
+
+.register-button {
+  background-color: #2575fc;
+  color: #fff;
+  box-shadow: 0 5px 15px rgba(37,117,252,0.6);
+}
+
+.register-button:hover {
+  background-color: #1a4fcc;
+  box-shadow: 0 5px 20px rgba(26,79,204,0.8);
+}
+
+@keyframes buttonHoverPulse {
+  0% {
+    transform: scale(1);
+    box-shadow: 0 0 5px rgba(0,0,0,0.2);
+  }
+  50% {
+    transform: scale(1.05);
+    box-shadow: 0 0 15px rgba(0,123,255,0.6);
+  }
+  100% {
+    transform: scale(1);
+    box-shadow: 0 0 5px rgba(0,0,0,0.2);
+  }
+}
+
+/* Loading overlay while redirecting */
+
+.loading-overlay {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 15px;
+  color: white;
+  font-size: 1.2rem;
+}
+
+.loading-spinner {
+  border: 5px solid rgba(255, 255, 255, 0.3);
+  border-top: 5px solid white;
+  border-radius: 50%;
+  width: 48px;
+  height: 48px;
+  animation: spin 1s linear infinite;
+}
+
+/* Spinner animation */
+@keyframes spin {
+  to { transform: rotate(360deg); }
+}

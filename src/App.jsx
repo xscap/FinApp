@@ -4,7 +4,7 @@ import InvoiceViewer from "./Layout/Display/InvoiceViewer";
 import PaymentViewer from "./Layout/Display/PaymentViewer";
 import CustomerViewer from "./Layout/Display/CustomerViewer";
 import Login from "./Authentication/Login";
-import Payments from "./Payments/Payments";
+import WelcomeMenu from "./Authentication/WelcomeMenu";
 import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
 
 import Register from "./Authentication/Register";
@@ -14,13 +14,16 @@ function App() {
     <>
       <Router>
         <Routes>
-          <Route path="/" element={<DashboardViewer/>}/>   // Home route with Navbar - will change based on the FireBase integration , mainly Authentication and Cloud Firestore
+          <Route path="/" element={<WelcomeMenu />} />  // Default route to Welcome Menu
+          <Route path="/dashboard" element={<DashboardViewer/>}/>   // Home route with Navbar - will change based on the FireBase integration , mainly Authentication and Cloud Firestore
           <Route path = "/reports" element={<ReportViewer />} />
           <Route path = "/invoices" element={<InvoiceViewer />} />
           <Route path="/payments" element={<PaymentViewer/>} />
           <Route path="/customers" element={<CustomerViewer/>} />
           <Route path = "/login" element={<Login />} />
           <Route path = "/register" element={<Register />} />
+          <Route path = "/wlcm" element={<WelcomeMenu />} />
+          
           
         </Routes>
       </Router>
