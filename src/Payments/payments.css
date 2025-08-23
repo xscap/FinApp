@@ -1,0 +1,195 @@
+.app-container {
+  display: flex;
+  flex-direction: column;
+  padding-left: 3rem;
+  padding-right: 3rem;
+}
+
+.header-row {
+  display: flex;
+  align-items: center;
+  flex-direction: row;
+  justify-content: space-between;
+}
+
+.main-title {
+  font-size: 2rem;
+  font-weight: bold;
+  padding: 1rem 0;
+}
+
+.btn-action {
+  font-size: 0.95rem;
+  border-radius: 1rem;
+  background: #e5e7eb;
+  padding: 0.5rem 1.5rem;
+  cursor: pointer;
+  display: inline-block;
+}
+
+.summary-cards {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 0.75rem;
+  padding: 1rem 0;
+}
+
+.summary-card {
+  border: 1px solid #e5e7eb;
+  border-radius: 1rem;
+  padding: 1.5rem;
+}
+
+.summary-label {
+  font-weight: 500;
+}
+
+.summary-value {
+  font-weight: bold;
+  font-size: 1.5rem;
+}
+
+.section-title {
+  font-size: 1.5rem;
+  font-weight: bold;
+  margin-top: 1.5rem;
+}
+
+.details-cards {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 0.75rem;
+  padding: 1rem 0;
+}
+
+.details-card {
+  border: 1px solid #e5e7eb;
+  border-radius: 1rem;
+  padding: 1.5rem;
+}
+
+.details-label {
+  font-weight: 500;
+}
+
+.details-value {
+  font-weight: bold;
+  font-size: 1.5rem;
+}
+
+.table-container {
+  margin-top: 1rem;
+}
+
+.payments-table {
+  width: 100%;
+  border-collapse: collapse;
+  border-radius: 1rem;
+  overflow: hidden;
+  border: 1px solid #d1d5db;
+}
+
+.payments-table {
+  width: 100%;
+  border-collapse: collapse;   
+  table-layout: fixed;         
+}
+
+.payments-table th,
+.payments-table td {
+  padding: 1rem;
+  border-bottom: 1px solid #e5e7eb;
+  text-align: left;
+}
+
+.payments-table th {
+  background: #f3f4f6;
+  font-weight: 600;
+}
+
+
+.status-badge {
+  display: inline-block;
+  min-width: 8rem;
+  text-align: center;
+  border-radius: 1rem;
+  padding: 0.5rem 1.5rem;
+  font-weight: 500;
+}
+
+.status-badge.Paid {
+  background: #e0f8e9;
+  color: #2a7d2e;
+}
+
+.status-badge.Pending {
+  background: #fff3cd;
+  color: #856404;
+}
+
+
+.chart-section {
+  padding: 1rem 0;
+  display: grid;
+  gap: 0.75rem;
+}
+
+.chart-label {
+  font-weight: 500;
+}
+
+.chart-value {
+  font-weight: bold;
+  font-size: 2rem;
+}
+
+.chart-desc {
+  color: #6b7280;
+  font-weight: normal;
+}
+
+.cards-list {
+  display: grid;
+  grid-template-columns: repeat(5, minmax(220px, 1fr));
+  gap: 0.75rem;
+  overflow-x: auto;
+  padding: 1rem 0;
+}
+
+.card-item {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  border: 1px solid #d1d5db;
+  border-radius: 1rem;
+  padding: 1rem;
+  min-width: 220px;
+  background: #fff;
+  box-shadow: 0 1px 4px rgba(0, 0, 0, 0.04);
+  overflow: hidden;
+}
+
+.card-img {
+  height: 160px;
+  object-fit: cover;
+  margin-bottom: 0.5rem;
+}
+
+.card-number {
+  font-family: monospace;
+  letter-spacing: 0.15em;
+  margin-bottom: 0.25rem;
+}
+
+.card-expiry {
+  color: #6b7280;
+  font-size: 0.95rem;
+}
+
+.add-method-row {
+  padding: 1rem 0;
+}
+
+.add-method-btn {
+  font-weight: 600;
+}

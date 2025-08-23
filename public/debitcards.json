@@ -1,0 +1,16 @@
+[
+  {
+    "image": "/visa.png",
+    "number": "**** **** **** 1234",
+    "expiry": "12/27"
+  },
+  {
+    "image": "/mastercard.png",
+    "number": "**** **** **** 5678",
+    "expiry": "09/26"
+  },
+  {
+    "number": "**** **** **** 5678",
+    "expiry": "09/26"
+  }
+]
