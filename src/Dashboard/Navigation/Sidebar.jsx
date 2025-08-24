@@ -8,7 +8,7 @@ const Sidebar = () => {
   const location = useLocation();
 
   const menuItems = [
-    { name: "Dashboard", icon: <FaHome />, path: "/" },
+    { name: "Dashboard", icon: <FaHome />, path: "/dashboard" },
     { name: "Invoices", icon: <FaFileInvoice />, path: "/invoices" },
     { name: "Payments", icon: <FaDollarSign />, path: "/payments" },
     { name: "Customers", icon: <FaUsers />, path: "/customers" },

@@ -22,7 +22,7 @@ function App() {
           <Route path="/customers" element={<CustomerViewer/>} />
           <Route path = "/login" element={<Login />} />
           <Route path = "/register" element={<Register />} />
-          <Route path = "/wlcm" element={<WelcomeMenu />} />
+          {/* <Route path = "/wlcm" element={<WelcomeMenu />} /> */}
           
           
         </Routes>
