@@ -150,13 +150,113 @@
   color: #ff9800;
 }
 
-/* ===== Responsive Design ===== */
-@media (max-width: 768px) {
-  .overview {
+
+
+
+/* ✅ Tablet View (max-width: 1024px) */
+@media screen and (max-width: 1024px) {
+  .customers-container {
+    padding: 12px;
+  }
+
+  .header {
     flex-direction: column;
+    
+    gap: 8px;
+  }
+
+  .header h2 {
+    font-size: 1.6rem;
+  }
+
+  .add-btn {
+    width: 100%;
+    padding: 10px;
+    font-size: 14px;
+  }
+
+  .overview {
+    grid-template-columns: repeat(2, 1fr);
+    gap: 16px;
+  }
+
+  .card {
+    padding: 14px;
+    font-size: 14px;
   }
 
   .insights {
-    flex-direction: column;
+    grid-template-columns: 1fr;
+    gap: 20px;
+  }
+
+  .chart-card {
+    padding: 16px;
+  }
+
+  table {
+    font-size: 14px;
   }
 }
+
+/* ✅ Mobile View (max-width: 768px) */
+@media screen and (max-width: 768px) {
+  .customers-container {
+    padding: 8px;
+  }
+
+  .header {
+    flex-direction: column;
+    align-items: center;
+    gap: 10px;
+  }
+
+  .header h2 {
+    font-size: 1.3rem;
+    margin-bottom: 15px;
+  }
+
+  .add-btn {
+    width: 30%;
+    padding: 12px;
+    font-size: 14px;
+  }
+
+  .overview {
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+  }
+
+  .card {
+    text-align: center;
+    padding: 12px;
+    font-size: 14px;
+  }
+
+  .insights {
+    display: flex;
+    flex-direction: column;
+    gap: 16px;
+  }
+
+  .chart-card {
+    padding: 12px;
+  }
+
+  /* ✅ Table should scroll horizontally */
+  .customer-list {
+    overflow-x: auto;
+  }
+
+  table {
+    width: 700px; /* Force scroll */
+    font-size: 13px;
+  }
+
+  th,
+  td {
+    padding: 8px;
+  }
+}
+
