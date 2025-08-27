@@ -1,62 +1,124 @@
-.modal-overlay {
+.imodal-overlay {
   position: fixed;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 100%;
-  background: rgba(0,0,0,0.4);
+  inset: 0;
+  background: rgba(30, 41, 59, 0.35);
   display: flex;
   align-items: center;
   justify-content: center;
+  z-index: 9999;
 }
 
-.modal {
+.imodal {
   background: #fff;
-  padding: 20px;
-  width: 400px;
-  border-radius: 10px;
+  border-radius: 14px;
+  box-shadow: 0 8px 32px rgba(0,0,0,0.15);
+  padding: 32px 28px 24px 28px;
+  width: 100%;
+  max-width: 410px;
+  position: relative;
+  animation: imodal-fade-in 0.22s;
 }
 
-.modal h2 {
-  margin-bottom: 15px;
+@keyframes imodal-fade-in {
+  from { transform: translateY(-24px); opacity: 0; }
+  to { transform: translateY(0); opacity: 1; }
 }
 
-.modal form {
+.imodal-close {
+  position: absolute;
+  top: 14px;
+  right: 18px;
+  background: none;
+  border: none;
+  font-size: 1.5rem;
+  color: #64748b;
+  cursor: pointer;
+  transition: color 0.2s;
+}
+.imodal-close:hover {
+  color: #1e293b;
+}
+
+.imodal-title {
+  margin-bottom: 18px;
+  font-size: 1.35rem;
+  font-weight: 600;
+  color: #22223b;
+  text-align: center;
+}
+
+.imodal-form {
   display: flex;
   flex-direction: column;
+  gap: 14px;
 }
 
-label {
-  font-weight: bold;
-  margin: 10px 0 5px;
+.imodal-row {
+  display: flex;
+  gap: 12px;
 }
 
-input, select {
-  padding: 8px;
+.imodal-field {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+}
+
+.imodal-field label {
+  font-size: 0.97rem;
+  color: #475569;
+  font-weight: 500;
+}
+
+.imodal-field input,
+.imodal-field select {
+  padding: 8px 10px;
+  border: 1px solid #d1d5db;
   border-radius: 6px;
-  border: 1px solid #ccc;
+  font-size: 1rem;
+  background: #f9fafb;
+  transition: border 0.2s;
 }
 
-.modal-actions {
+.imodal-field input:focus,
+.imodal-field select:focus {
+  border: 1.5px solid #6366f1;
+  outline: none;
+  background: #fff;
+}
+
+.imodal-actions {
   display: flex;
   justify-content: flex-end;
   gap: 10px;
-  margin-top: 15px;
+  margin-top: 10px;
 }
 
-.save-btn {
-  background: #28a745;
-  color: white;
+.imodal-save {
+  background: #2563eb;
+  color: #fff;
   border: none;
-  padding: 8px 12px;
+  padding: 8px 18px;
   border-radius: 6px;
+  font-weight: 500;
   cursor: pointer;
+  transition: background 0.2s;
+}
+.imodal-save:hover {
+  background: #1d4ed8;
 }
 
-.cancel-btn {
-  background: #ccc;
+.imodal-cancel {
+  background: #f3f4f6;
+  color: #374151;
   border: none;
-  padding: 8px 12px;
+  padding: 8px 18px;
   border-radius: 6px;
+  font-weight: 500;
   cursor: pointer;
+  transition: background 0.2s;
+}
+.imodal-cancel:hover {
+  background: #e5e7eb;
 }

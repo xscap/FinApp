@@ -118,7 +118,7 @@
 }
 
 /* Password wrapper */
-/* .password-wrapper {
+ .password-wrapper {
   position: relative;
   margin-bottom: 1rem;
 }
@@ -129,8 +129,8 @@
   border: 1px solid #ddd;
   border-radius: 6px;
   font-size: 1rem;
-  padding-right: 2.5rem; /* space for eye button 
-} */
+  padding-right: 2.5rem; 
+}
 
 .eye-icon {
   position: absolute;
@@ -268,4 +268,72 @@
   height: 100%;
   object-fit: cover;
   object-position: left;
+}
+/* Responsive Design */
+@media (max-width: 1024px) {
+  .register-container {
+    padding-left: 0;
+  }
+  .form-wrapper {
+    padding-left: 2rem;
+  }
+}
+
+@media (max-width: 768px) {
+  .register-container {
+    flex-direction: column;
+    padding-left: 0;
+    height: auto;
+    min-height: 100vh;
+  }
+  .register-form-section {
+    align-items: center;
+    padding: 2rem 1rem 1rem 1rem;
+    width: 100%;
+  }
+  .form-wrapper {
+    padding-left: 0;
+    width: 100%;
+    max-width: 400px;
+    margin: 0 auto;
+  }
+  .register-image {
+    display: none;
+  }
+}
+
+@media (max-width: 480px) {
+  .register-container {
+    padding: 0;
+  }
+  .register-form-section {
+    padding: 1.2rem 0.5rem;
+  }
+  .form-wrapper {
+    padding: 0;
+    max-width: 100%;
+  }
+  .brand-title {
+    font-size: 1.3rem;
+    margin-bottom: 1rem;
+  }
+  .register-title {
+    font-size: 1.1rem;
+  }
+  .register-subtitle {
+    font-size: 0.95rem;
+    margin-bottom: 1rem;
+  }
+  .register-btn,
+  .social-btn {
+    font-size: 0.95rem;
+    padding: 0.5rem 0.7rem;
+  }
+  .divider {
+    margin: 1.2rem 0;
+    font-size: 0.95rem;
+  }
+  .signup-link {
+    font-size: 0.95rem;
+  }
 }

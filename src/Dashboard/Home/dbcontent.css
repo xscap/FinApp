@@ -22,7 +22,7 @@
   padding: 20px;
   border-radius: 8px;
   flex: 1;
-  box-shadow: 0 2px 6px rgba(0,0,0,0.05);
+  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.05);
 }
 
 .card h3 {
@@ -47,7 +47,7 @@
   background: white;
   padding: 20px;
   border-radius: 8px;
-  box-shadow: 0 2px 6px rgba(0,0,0,0.05);
+  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.05);
 }
 
 .overview-card h4 {
@@ -84,4 +84,104 @@
 .categories li {
   margin: 8px 0;
   font-size: 14px;
+}
+
+/* ✅ Tablet Landscape: 769px to 1024px */
+@media (min-width: 769px) and (max-width: 1024px) {
+  .dashboard {
+    padding: 14px;
+  }
+  .top-cards {
+    flex-wrap: wrap;
+    gap: 14px;
+  }
+  .card {
+    flex: 1 1 100%;
+    min-width: 220px;
+    margin-bottom: 10px;
+  }
+  .overview {
+    grid-template-columns: 1fr 1fr;
+    gap: 14px;
+  }
+  .dashboard-title {
+    font-size: 1.4rem;
+  }
+  .card,
+  .overview-card {
+    padding: 14px;
+  }
+}
+
+/* ✅ Responsive Design for Tablets: max-width 768px */
+@media (max-width: 768px) {
+  .dashboard {
+    padding: 10px;
+  }
+  .dashboard-title {
+    font-size: 1.15rem;
+    margin-bottom: 14px;
+  }
+  .top-cards {
+    flex-direction: column;
+    gap: 12px;
+    margin-bottom: 18px;
+  }
+  .card {
+    padding: 12px;
+    font-size: 0.98rem;
+  }
+  .overview {
+    grid-template-columns: 1fr;
+    gap: 12px;
+  }
+  .overview-card {
+    padding: 12px;
+  }
+  .section-title {
+    font-size: 1.08rem;
+    margin-bottom: 10px;
+  }
+}
+
+/* ✅ Responsive Design for Mobile: max-width 480px */
+@media (max-width: 480px) {
+  .dashboard {
+    padding: 4px;
+  }
+  .dashboard-title {
+    font-size: 1rem;
+    margin-bottom: 10px;
+    text-align: center;
+  }
+  .top-cards {
+    gap: 8px;
+    margin-bottom: 12px;
+  }
+  .card,
+  .overview-card {
+    padding: 8px;
+    border-radius: 5px;
+    font-size: 0.95rem;
+  }
+  .section-title {
+    font-size: 0.98rem;
+    margin-bottom: 6px;
+  }
+  .overview {
+    gap: 8px;
+  }
+  .overview-card h2 {
+    font-size: 1rem;
+  }
+  .overview-card h4 {
+    font-size: 0.95rem;
+  }
+  .overview-card p,
+  .categories li {
+    font-size: 0.9rem;
+  }
+  .categories li {
+    margin: 4px 0;
+  }
 }

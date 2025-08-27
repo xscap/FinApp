@@ -11,6 +11,7 @@ import {
   Title,
   Tooltip,
   Legend,
+  Filler, // Required for "fill" option
 } from "chart.js";
 
 ChartJS.register(
@@ -21,7 +22,8 @@ ChartJS.register(
   BarElement,
   Title,
   Tooltip,
-  Legend
+  Legend,
+  Filler // Register Filler plugin
 );
 
 const DashboardCntnt = () => {
