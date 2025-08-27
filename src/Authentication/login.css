@@ -211,3 +211,71 @@
   object-fit: cover;
   object-position: left;
 }
+/* Responsive Design */
+@media (max-width: 1024px) {
+  .login-container {
+    padding-left: 0;
+  }
+  .form-wrapper {
+    padding-left: 2rem;
+  }
+}
+
+@media (max-width: 768px) {
+  .login-container {
+    flex-direction: column;
+    padding-left: 0;
+    height: auto;
+    min-height: 100vh;
+  }
+  .login-form-section {
+    align-items: center;
+    padding: 2rem 1rem 1rem 1rem;
+    width: 100%;
+  }
+  .form-wrapper {
+    padding-left: 0;
+    width: 100%;
+    max-width: 400px;
+    margin: 0 auto;
+  }
+  .login-image {
+    display: none;
+  }
+}
+
+@media (max-width: 480px) {
+  .login-container {
+    padding: 0;
+  }
+  .login-form-section {
+    padding: 1.2rem 0.5rem;
+  }
+  .form-wrapper {
+    padding: 0;
+    max-width: 100%;
+  }
+  .brand-title {
+    font-size: 1.3rem;
+    margin-bottom: 1rem;
+  }
+  .login-title {
+    font-size: 1.1rem;
+  }
+  .login-subtitle {
+    font-size: 0.95rem;
+    margin-bottom: 1rem;
+  }
+  .login-btn,
+  .social-btn {
+    font-size: 0.95rem;
+    padding: 0.5rem 0.7rem;
+  }
+  .divider {
+    margin: 1.2rem 0;
+    font-size: 0.95rem;
+  }
+  .signup-link {
+    font-size: 0.95rem;
+  }
+}

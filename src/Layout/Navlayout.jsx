@@ -7,7 +7,7 @@ const NavLayout = ({ children }) => {
   return (
     <div className="layout">
       {/* Top Navbar */}
-      <Navbar />
+      {/* <Navbar /> */}
 
       <div className="layout-body">
         {/* Sidebar */}
