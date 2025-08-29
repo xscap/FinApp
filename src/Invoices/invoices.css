@@ -122,76 +122,104 @@ tbody tr:last-child {
   color: #d97706;
 }
 
-/* ===================== Responsive ===================== */
+/* ===== Default (Desktop) ===== */
+.invoice-list {
+  display: none; /* Hide cards on desktop */
+}
 
-/* Tablet */
-@media (max-width: 1024px) {
+/* ===== Tablets (max-width: 768px) ===== */
+@media (max-width: 768px) {
   .invoice-header {
     flex-direction: column;
     align-items: center;
-    gap: 10px;
     text-align: center;
   }
-  .invoice-header h1,
+
   .create-btn {
-    width: 100%;
-    text-align: center;
-    justify-content: center;
-    display: flex;
+    margin-top: 10px;
+    width: 50%;
+    max-width: 300px;
   }
-  .create-btn {
-    margin-top: 6px;
-    margin-bottom: 0;
-  }
+
   .overview {
-    flex-direction: row;
-    flex-wrap: wrap;
-    justify-content: center;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 15px;
+    margin: 20px 0;
   }
-  .card {
-    flex: 0 0 48%;
-    margin-bottom: 15px;
+
+  .overview .card {
+    width: 80%;
+    max-width: 300px;
+    text-align: center;
+  }
+
+  table.invoice-table {
+    display: none; /* Hide table for mobile */
+  }
+
+  .invoice-list {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+    margin: 20px 0;
+  }
+
+  .invoice-card {
+    background: #fff;
+    border-radius: 8px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.05);
+    padding: 15px;
+    text-align: center;
+  }
+
+  .invoice-card p {
+    margin: 8px 0;
+    font-size: 14px;
+  }
+
+  .invoice-card .status {
+    display: inline-block;
+    padding: 4px 10px;
+    border-radius: 20px;
+    font-size: 13px;
+    margin-top: 5px;
   }
 }
 
-/* Mobile */
-@media (max-width: 768px) {
-  .overview {
-    flex-direction: column;
-    gap: 10px;
-  }
-  .card {
-    flex: 1;
+/* ===== Mobile (max-width: 420px) ===== */
+@media (max-width: 420px) {
+  .invoice-header h1 {
+    font-size: 24px;
   }
 
-  /* Convert table into stacked cards */
-  table, thead, tbody, th, td, tr {
-    display: block;
-    width: 100%;
-  }
-
-  thead {
-    display: none;
-  }
-
-  tr {
-    margin-bottom: 15px;
-    background: #fff;
-    border-radius: 10px;
-    padding: 10px;
-    box-shadow: 0 2px 6px rgba(0, 0, 0, 0.05);
-  }
-
-  td {
-    display: flex;
-    justify-content: center;
+  .create-btn {
     font-size: 14px;
-    padding: 8px 0;
+    padding: 10px;
+    width: 50%;
   }
 
-  td:before {
-    content: attr(data-label);
-    font-weight: 600;
-    color: #555;
+  .overview .card {
+    width: 100%;
+    max-width: 320px;
+    padding: 15px;
+    font-size: 16px;
+  }
+
+  .invoice-card {
+    width: 100%;
+    max-width: 320px;
+    margin: 0 auto;
+    font-size: 14px;
+  }
+
+  .invoice-card h3 {
+    font-size: 18px;
+    margin-bottom: 8px;
+  }
+
+  .invoice-card p {
+    font-size: 14px;
   }
 }

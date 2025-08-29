@@ -121,6 +121,7 @@
   .dashboard-title {
     font-size: 1.15rem;
     margin-bottom: 14px;
+    text-align: center;
   }
   .top-cards {
     flex-direction: column;
@@ -163,6 +164,7 @@
     padding: 8px;
     border-radius: 5px;
     font-size: 0.95rem;
+    width: 100%;
   }
   .section-title {
     font-size: 0.98rem;

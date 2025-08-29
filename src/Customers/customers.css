@@ -197,6 +197,7 @@
   table {
     font-size: 14px;
   }
+ 
 }
 
 /* ✅ Mobile View (max-width: 768px) */
@@ -242,6 +243,7 @@
 
   .chart-card {
     padding: 12px;
+    width: 100%;
   }
 
   /* ✅ Table should scroll horizontally */
@@ -257,6 +259,19 @@
   th,
   td {
     padding: 8px;
+    display: none;
   }
+
+  .customer-list td{
+    padding: 10px 8px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  font-size: 14px;
+  border-bottom: none
+  }
+ 
 }
 
