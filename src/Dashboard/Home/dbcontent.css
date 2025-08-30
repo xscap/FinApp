@@ -127,14 +127,17 @@
     flex-direction: column;
     gap: 12px;
     margin-bottom: 18px;
+    align-items: center;
   }
   .card {
     padding: 12px;
     font-size: 0.98rem;
   }
   .overview {
-    grid-template-columns: 1fr;
+    /* grid-template-columns: 1fr; */
     gap: 12px;
+    display: flex;
+    flex-direction: row;
   }
   .overview-card {
     padding: 12px;
