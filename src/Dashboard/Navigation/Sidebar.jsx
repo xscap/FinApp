@@ -17,6 +17,9 @@ const Sidebar = () => {
     { name: "Settings", icon: <FaCog />, path: "/settings" }
   ];
 
+  const mainMenuItems = menuItems.filter(item => item.name !== "Settings");
+  const settingsItem = menuItems.find(item => item.name === "Settings");
+
   // Sidebar content
   const sidebarContent = (
     <div className={`sidebar${open ? " open" : ""}`}>
@@ -25,7 +28,7 @@ const Sidebar = () => {
       </button>
       <h2 className="sidebar-logo">FinancePro</h2>
       <ul className="sidebar-menu">
-        {menuItems.map((item) => (
+        {mainMenuItems.map((item) => (
           <li
             key={item.name}
             className={`sidebar-item${location.pathname === item.path ? " active" : ""}`}
@@ -39,6 +42,18 @@ const Sidebar = () => {
           </li>
         ))}
       </ul>
+      <div className="sidebar-settings">
+        <li
+          className={`sidebar-item${location.pathname === settingsItem.path ? " active" : ""}`}
+          onClick={() => {
+            navigate(settingsItem.path);
+            setOpen(false);
+          }}
+        >
+          <span className="icon">{settingsItem.icon}</span>
+          <span className="text">{settingsItem.name}</span>
+        </li>
+      </div>
     </div>
   );
 
