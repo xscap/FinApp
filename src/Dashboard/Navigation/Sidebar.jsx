@@ -1,7 +1,7 @@
 import React, { useState } from "react";
 import { useNavigate, useLocation } from "react-router-dom";
 import "./sidebar.css";
-import { FaHome, FaFileInvoice, FaDollarSign, FaUsers, FaChartBar, FaBars, FaTimes } from "react-icons/fa";
+import { FaHome, FaFileInvoice, FaDollarSign, FaUsers, FaChartBar, FaBars, FaTimes, FaCog } from "react-icons/fa";
 
 const Sidebar = () => {
   const navigate = useNavigate();
@@ -14,6 +14,7 @@ const Sidebar = () => {
     { name: "Payments", icon: <FaDollarSign />, path: "/payments" },
     { name: "Customers", icon: <FaUsers />, path: "/customers" },
     { name: "Reports", icon: <FaChartBar />, path: "/reports" },
+    { name: "Settings", icon: <FaCog />, path: "/settings" }
   ];
 
   // Sidebar content

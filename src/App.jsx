@@ -3,6 +3,7 @@ import ReportViewer from "./Layout/Display/ReportViewer";
 import InvoiceViewer from "./Layout/Display/InvoiceViewer";
 import PaymentViewer from "./Layout/Display/PaymentViewer";
 import CustomerViewer from "./Layout/Display/CustomerViewer";
+import SettingsViewer from "./Layout/Display/SettingsViewer";
 import Login from "./Authentication/Login";
 import WelcomeMenu from "./Authentication/WelcomeMenu";
 import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
@@ -22,9 +23,8 @@ function App() {
           <Route path="/customers" element={<CustomerViewer/>} />
           <Route path = "/login" element={<Login />} />
           <Route path = "/register" element={<Register />} />
+          <Route path = "/settings" element={<SettingsViewer />} />
           {/* <Route path = "/wlcm" element={<WelcomeMenu />} /> */}
-          
-          
         </Routes>
       </Router>
     </>
