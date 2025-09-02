@@ -1,0 +1,318 @@
+.settings-container {
+  padding: 40px 48px;
+  background: #fff;
+  min-height: 100vh;
+  box-sizing: border-box;
+}
+
+
+.settings-title {
+  font-size: 2rem;
+  font-weight: 700;
+  margin-bottom: 32px;
+}
+
+.section-title {
+  font-size: 1.25rem;
+  font-weight: 600;
+  margin-bottom: 18px;
+  margin-top: 32px;
+}
+.message-info {
+  margin-top: 16px;
+  padding: 10px 18px;
+  background: #e7f0ff;
+  color: #218bd6;
+  border-radius: 5px;
+  font-size: 1rem;
+  width: fit-content;
+}
+
+.profile-section {
+  margin-bottom: 48px;
+}
+
+.profile-content {
+  display: flex;
+  align-items: flex-start;
+  gap: 32px;
+  margin-bottom: 18px;
+}
+
+.profile-picture-box {
+  width: 160px;
+  height: 120px;
+  background: #f6d2bc;
+  border-radius: 8px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.profile-picture {
+  width: 160px;
+  height: 120px;
+  object-fit: cover;
+  border-radius: 8px;
+  background-color: transparent;
+}
+
+.profile-details {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+.profile-subtitle {
+  font-size: 1rem;
+  margin: 0;
+  font-weight: 600;
+}
+
+.profile-instructions {
+  margin: 8px 0 12px 0;
+  font-size: 0.96rem;
+  color: #646464;
+}
+
+.change-picture-btn {
+  padding: 7px 18px;
+  background: #218bd6;
+  border: none;
+  border-radius: 5px;
+  color: #fff;
+  font-weight: 500;
+  cursor: pointer;
+}
+
+.profile-form {
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+  max-width: 420px;
+  margin-top: 8px;
+}
+
+.settings-input {
+  padding: 10px 14px;
+  border: 1px solid #eaeaea;
+  border-radius: 6px;
+  font-size: 1rem;
+  background: #fafafa;
+}
+
+.save-changes-btn {
+  align-self: flex-end;
+  margin-top: 12px;
+  padding: 9px 24px;
+  background: #218bd6;
+  color: #fff;
+  border: none;
+  border-radius: 5px;
+  font-weight: 500;
+  cursor: pointer;
+}
+
+.billing-section {
+  margin-top: 36px;
+}
+
+.billing-content {
+  display: flex;
+  align-items: center;
+  gap: 32px;
+}
+
+.plan-details {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+
+.current-plan {
+  font-size: 1rem;
+  font-weight: 500;
+}
+
+.renew-date {
+  color: #646464;
+  font-size: 0.96rem;
+}
+
+.upgrade-plan-btn {
+  margin: 15px 0 7px 0;
+  padding: 7px 16px;
+  background: #e7e9f0;
+  border: none;
+  border-radius: 6px;
+  color: #333;
+  font-weight: 500;
+  cursor: pointer;
+}
+
+.manage-payment-btn,
+.logout-btn {
+  margin: 2px 0;
+  padding: 7px 16px;
+  background: #e7e9f0;
+  border: none;
+  border-radius: 6px;
+  color: #333;
+  font-weight: 500;
+  cursor: pointer;
+}
+
+.card-image-box {
+  background: #f6d2bc;
+  border-radius: 8px;
+  padding: 16px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.card-image {
+  width: 180px;
+  height: 100px;
+  object-fit: contain;
+  border-radius: 8px;
+}
+/* ✅ Existing desktop styles remain unchanged above this line */
+
+/* ========================= */
+/* 📱 Responsive Styles */
+/* ========================= */
+
+/* Tablets (max-width: 992px) */
+@media (max-width: 992px) {
+  .settings-container {
+    padding: 24px;
+  }
+
+  .profile-content {
+    flex-direction: column;
+    align-items: center;
+    gap: 20px;
+  }
+
+  .profile-picture-box {
+    width: 140px;
+    height: 140px;
+  }
+
+  .profile-picture {
+    width: 120px;
+    height: 120px;
+  }
+
+  .billing-content {
+    flex-direction: column;
+    gap: 20px;
+    align-items: flex-start;
+  }
+
+  .card-image {
+    width: 160px;
+    height: auto;
+  }
+}
+
+/* Mobiles (max-width: 600px) */
+@media (max-width: 600px) {
+  .settings-container {
+    padding: 16px;
+  }
+
+  .settings-title {
+    font-size: 1.5rem;
+    text-align: center;
+  }
+
+  .section-title {
+    font-size: 1.1rem;
+    text-align: left;
+  }
+
+  .profile-content {
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+  }
+
+  .profile-details {
+    align-items: center;
+  }
+
+  .profile-form {
+    width: 100%;
+    max-width: 100%;
+  }
+
+  .settings-input {
+    font-size: 0.95rem;
+    padding: 9px 12px;
+  }
+
+  .save-changes-btn {
+    width: 100%;
+    align-self: center;
+    padding: 10px;
+  }
+
+  .billing-content {
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+  }
+
+  .plan-details {
+    align-items: center;
+  }
+
+  .upgrade-plan-btn,
+  .manage-payment-btn,
+  .logout-btn {
+    width: 100%;
+    max-width: 300px;
+  }
+
+  .card-image-box {
+    background: transparent;
+    width: 100%;
+    justify-content: center;
+  }
+
+  .card-image {
+    width: 100%;
+    max-width: 260px;
+    height: auto;
+  }
+}
+
+/* Very small devices (max-width: 400px) */
+@media (max-width: 400px) {
+  .settings-title {
+    font-size: 1.25rem;
+  }
+
+  .section-title {
+    font-size: 1rem;
+  }
+
+  .profile-picture-box {
+    width: 120px;
+    height: 120px;
+  }
+
+  .profile-picture {
+    width: 100px;
+    height: 100px;
+  }
+
+  .settings-input {
+    font-size: 0.9rem;
+    padding: 8px 10px;
+  }
+}
