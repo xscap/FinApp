@@ -1,7 +1,7 @@
 import React, { useState } from "react";
 import { useNavigate, useLocation } from "react-router-dom";
 import "./sidebar.css";
-import { FaHome, FaFileInvoice, FaDollarSign, FaUsers, FaChartBar, FaBars, FaTimes } from "react-icons/fa";
+import { FaHome, FaFileInvoice, FaDollarSign, FaUsers, FaChartBar, FaBars, FaTimes, FaCog } from "react-icons/fa";
 
 const Sidebar = () => {
   const navigate = useNavigate();
@@ -14,7 +14,11 @@ const Sidebar = () => {
     { name: "Payments", icon: <FaDollarSign />, path: "/payments" },
     { name: "Customers", icon: <FaUsers />, path: "/customers" },
     { name: "Reports", icon: <FaChartBar />, path: "/reports" },
+    { name: "Settings", icon: <FaCog />, path: "/settings" }
   ];
+
+  const mainMenuItems = menuItems.filter(item => item.name !== "Settings");
+  const settingsItem = menuItems.find(item => item.name === "Settings");
 
   // Sidebar content
   const sidebarContent = (
@@ -24,7 +28,7 @@ const Sidebar = () => {
       </button>
       <h2 className="sidebar-logo">FinancePro</h2>
       <ul className="sidebar-menu">
-        {menuItems.map((item) => (
+        {mainMenuItems.map((item) => (
           <li
             key={item.name}
             className={`sidebar-item${location.pathname === item.path ? " active" : ""}`}
@@ -38,6 +42,18 @@ const Sidebar = () => {
           </li>
         ))}
       </ul>
+      <div className="sidebar-settings">
+        <li
+          className={`sidebar-item${location.pathname === settingsItem.path ? " active" : ""}`}
+          onClick={() => {
+            navigate(settingsItem.path);
+            setOpen(false);
+          }}
+        >
+          <span className="icon">{settingsItem.icon}</span>
+          <span className="text">{settingsItem.name}</span>
+        </li>
+      </div>
     </div>
   );
 
