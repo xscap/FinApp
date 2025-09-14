@@ -1,5 +1,5 @@
 import React, { useRef, useState, useEffect } from "react";
-import './settings.css';
+import './setting.css';
 import ProfilePhoto from '../assets/images/Profile.jpg';
 import PaymentPicture from '../assets/images/Payment.jpg';
 import { useNavigate } from "react-router-dom";

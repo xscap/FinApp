@@ -209,6 +209,24 @@
   margin-top: 16px;
 }
 
+@media (max-width: 768px) {
+  .cards-list {
+    flex-wrap: nowrap;
+    overflow-x: auto;
+    -webkit-overflow-scrolling: touch;
+    gap: 0;
+    padding-bottom: 8px;
+    scroll-snap-type: x mandatory;
+  }
+  .card-item {
+    min-width: 90vw;
+    max-width: 90vw;
+    flex: 0 0 90vw;
+    scroll-snap-align: start;
+    margin-right: 8px;
+  }
+}
+
 .card-item {
   background: #fff;
   padding: 14px;
