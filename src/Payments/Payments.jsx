@@ -1,4 +1,5 @@
 import "./payments.css";
+import GeneratePayment from "./GeneratePayment";
 import { useEffect, useState } from "react";
 import cardImg from "../assets/images/card-placeholder.png";
 import { Line } from "react-chartjs-2";
@@ -24,6 +25,7 @@ ChartJS.register(
 function Payments() {
   const [payments, setPayments] = useState([]);
   const [debitCards, setDebitCards] = useState([]);
+  const [showModal, setShowModal] = useState(false); // Modal state added
 
   useEffect(() => {
     fetch("/payments.json")
@@ -68,7 +70,10 @@ function Payments() {
       {/* Header */}
       <div className="header-row">
         <h1 className="main-title">Payments</h1>
-        <p className="btn-action">Make Payment</p>
+        {/* UPDATED for modal open */}
+        <p className="btn-action" onClick={() => setShowModal(true)}>
+          Make Payment
+        </p>
       </div>
 
       {/* Summary Cards */}
@@ -185,6 +190,23 @@ function Payments() {
       <div className="add-method-row">
         <p className="btn-action add-method-btn">Add Payment Method</p>
       </div>
+
+      {/* MODAL: Only this block added */}
+      {showModal && (
+        <GeneratePayment
+          onClose={() => setShowModal(false)}
+          addPayment={(payment) => {
+            setPayments(prev => [
+              {
+                ...payment,
+                description: payment.note || payment.customer, // fallback
+              },
+              ...prev,
+            ]);
+            setShowModal(false);
+          }}
+        />
+      )}
     </div>
   );
 }
