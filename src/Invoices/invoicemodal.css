@@ -1,0 +1,88 @@
+.invoice-modal-overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 0, 0, 0.5);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  z-index: 1000;
+}
+
+.invoice-modal {
+  background: #fff;
+  border-radius: 10px;
+  padding: 20px;
+  width: 380px;
+  max-width: 95%;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+}
+
+.invoice-modal-title {
+  font-size: 20px;
+  font-weight: bold;
+  margin-bottom: 15px;
+  color: #000;
+}
+
+.invoice-modal-form {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+}
+
+.invoice-modal-form input,
+.invoice-modal-form select {
+  width: 100%;
+  padding: 10px;
+  border: 1px solid #ddd;
+  border-radius: 6px;
+  font-size: 14px;
+  outline: none;
+}
+
+.invoice-modal-form input:focus,
+.invoice-modal-form select:focus {
+  border-color: #000;
+}
+
+.invoice-modal-row {
+  display: flex;
+  gap: 10px;
+}
+
+.invoice-modal-actions {
+  display: flex;
+  justify-content: space-between;
+  margin-top: 15px;
+}
+
+.invoice-save-btn {
+  background: #000;
+  color: #fff;
+  border: none;
+  padding: 10px 18px;
+  border-radius: 6px;
+  font-size: 14px;
+  cursor: pointer;
+}
+
+.invoice-cancel-btn {
+  background: #e5e5e5;
+  color: #000;
+  border: none;
+  padding: 10px 18px;
+  border-radius: 6px;
+  font-size: 14px;
+  cursor: pointer;
+}
+
+.invoice-save-btn:hover {
+  background: #333;
+}
+
+.invoice-cancel-btn:hover {
+  background: #ccc;
+}

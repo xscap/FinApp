@@ -6,6 +6,8 @@
   padding-top: 20px;
   transition: all 0.3s ease;
   box-shadow: 2px 0 5px rgba(0, 0, 0, 0.05);
+  display: flex;
+  flex-direction: column;
 }
 
 .sidebar-logo {
@@ -19,6 +21,7 @@
 .sidebar-menu {
   list-style: none;
   padding: 0;
+  flex: 1 1 auto;
 }
 
 .sidebar-item {
@@ -59,4 +62,81 @@
 .sidebar-item.active .text,
 .sidebar-item:hover .text {
   color: #007bff;
+}
+
+.sidebar-settings {
+  margin-top: auto;
+  padding-bottom: 16px; /* optional for spacing */
+}
+
+/* Mobile Sidebar Styles */
+.sidebar-hamburger {
+  display: none;
+  position: fixed;
+  top: 18px;
+  left: 18px;
+  background: #fff;
+  border: none;
+  z-index: 1201;
+  font-size: 1.7rem;
+  color: #222;
+  cursor: pointer;
+  box-shadow: 0 2px 8px rgba(0,0,0,0.06);
+  border-radius: 6px;
+  padding: 6px 10px;
+}
+
+.sidebar-close {
+  display: none;
+  position: absolute;
+  top: 16px;
+  right: 16px;
+  background: none;
+  border: none;
+  font-size: 1.5rem;
+  color: #222;
+  cursor: pointer;
+  z-index: 1202;
+}
+
+.sidebar-overlay {
+  display: none;
+}
+
+@media (max-width: 768px) {
+  .sidebar {
+    position: fixed;
+    top: 0;
+    left: 0;
+    height: 100vh;
+    width: 80vw;
+    max-width: 270px;
+    background: #fff;
+    z-index: 1202;
+    transform: translateX(-100%);
+    transition: transform 0.3s cubic-bezier(.4,0,.2,1);
+    box-shadow: 2px 0 12px rgba(0,0,0,0.08);
+    padding-top: 32px;
+  }
+  .sidebar.open {
+    transform: translateX(0);
+  }
+  .sidebar-hamburger {
+    display: block;
+  }
+  .sidebar-close {
+    display: block;
+  }
+  .sidebar-overlay {
+    display: block;
+    position: fixed;
+    inset: 0;
+    background: rgba(30,41,59,0.18);
+    z-index: 1201;
+    animation: fadeIn 0.2s;
+  }
+  @keyframes fadeIn {
+    from { opacity: 0; }
+    to { opacity: 1; }
+  }
 }
