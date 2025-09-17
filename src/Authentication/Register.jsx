@@ -2,6 +2,7 @@ import React, { useState } from "react";
 import { FaApple } from "react-icons/fa";
 import { FcGoogle } from "react-icons/fc";
 import { FaEye, FaEyeSlash } from "react-icons/fa";
+import { Link } from "react-router-dom";
 import RegImg from "../assets/images/register_img.png"
 import { Link } from "react-router-dom";
 import "./register.css";
@@ -58,9 +59,9 @@ export default function Register() {
             <div className="form-group">
               <div className="form-label-row">
                 <label htmlFor="password">Password</label>
-                <a href="/forgot-password" className="forgot-link">
+                <Link to="/forgot-password" className="forgot-link">
                   Forgot password?
-                </a>
+                </Link>
               </div>
               <div className="password-wrapper">
                 <input
