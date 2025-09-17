@@ -2,7 +2,6 @@ import React, { useState } from "react";
 import { FaApple } from "react-icons/fa";
 import { FcGoogle } from "react-icons/fc";
 import { FaEye, FaEyeSlash } from "react-icons/fa";
-import { Link } from "react-router-dom";
 import RegImg from "../assets/images/register_img.png"
 import { Link } from "react-router-dom";
 import "./register.css";

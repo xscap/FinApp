@@ -4,8 +4,7 @@ import { FcGoogle } from "react-icons/fc";
 import { FaEye, FaEyeSlash } from "react-icons/fa";
 import { useNavigate, Link } from "react-router-dom"; // Navigation hook
 import "./login.css";
-
-;
+import LogImg from "../assets/images/login_img.png"
 
 
 export default function Login() {
