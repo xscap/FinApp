@@ -5,7 +5,7 @@ import { FaEye, FaEyeSlash } from "react-icons/fa";
 import { useNavigate } from "react-router-dom"; // Navigation hook
 import "./login.css";
 import LogImg from "../assets/images/login_img.png"
-// import "./UI_Auth/login.reponsive.css"
+import { Link } from "react-router-dom";
 
 export default function Login() {
   const [email, setEmail] = useState("");
@@ -120,7 +120,7 @@ export default function Login() {
           {/* Signup Link */}
           <div className="signup-link">
             <span>Don't have an account? </span>
-            <a href="/register">Sign up</a>
+            <Link to="/register" className="link-text">Register</Link>
           </div>
         </div>
       </div>

@@ -3,6 +3,7 @@ import { FaApple } from "react-icons/fa";
 import { FcGoogle } from "react-icons/fc";
 import { FaEye, FaEyeSlash } from "react-icons/fa";
 import RegImg from "../assets/images/register_img.png"
+import { Link } from "react-router-dom";
 import "./register.css";
 
 export default function Register() {
@@ -110,7 +111,7 @@ export default function Register() {
 
           <div className="signup-link">
             <span>Already have an account? </span>
-            <a href="/login">Sign in</a>
+            <Link to="/login" className="link-text">Login</Link>
           </div>
         </div>
       </div>
