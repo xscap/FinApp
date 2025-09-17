@@ -4,6 +4,7 @@ import { FcGoogle } from "react-icons/fc";
 import { FaEye, FaEyeSlash } from "react-icons/fa";
 import { useNavigate } from "react-router-dom"; // Navigation hook
 import "./login.css";
+import LogImg from "../assets/images/login_img.png"
 // import "./UI_Auth/login.reponsive.css"
 
 export default function Login() {
@@ -14,7 +15,7 @@ export default function Login() {
 
   const navigate = useNavigate();
 
-  // Dummy credentials for testing
+  // Dummy credentials for testing - Later to be replaced with NestJS Authentication
   const dummyEmail = "test@example.com";
   const dummyPassword = "123456";
 
@@ -23,7 +24,7 @@ export default function Login() {
 
     if (email === dummyEmail && password === dummyPassword) {
       setError("");
-      navigate("/dashboard"); // Navigate to Dashboard Viewer
+      navigate("/dashboard"); // Navigated to Dashboard Viewer
     } else {
       setError("Invalid email or password!");
     }
@@ -126,7 +127,7 @@ export default function Login() {
 
       {/* Right Section: Image */}
       <div className="login-image">
-        <img src="src/assets/images/login_img.png" alt="Login" />
+        <img src= {LogImg} alt="Login" />
       </div>
     </div>
   );
