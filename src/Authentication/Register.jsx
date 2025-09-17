@@ -2,6 +2,7 @@ import React, { useState } from "react";
 import { FaApple } from "react-icons/fa";
 import { FcGoogle } from "react-icons/fc";
 import { FaEye, FaEyeSlash } from "react-icons/fa";
+import RegImg from "../assets/images/register_img.png"
 import "./register.css";
 
 export default function Register() {
@@ -116,7 +117,7 @@ export default function Register() {
 
       {/* Right: Image */}
       <div className="register-image">
-        <img src="src/assets/images/register_img.png" alt="register" />
+        <img src= {RegImg} alt="register" />
       </div>
     </div>
   );
