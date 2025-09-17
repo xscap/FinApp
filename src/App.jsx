@@ -5,10 +5,12 @@ import PaymentViewer from "./Layout/Display/PaymentViewer";
 import CustomerViewer from "./Layout/Display/CustomerViewer";
 import SettingsViewer from "./Layout/Display/SettingsViewer";
 import Login from "./Authentication/Login";
+import Register from "./Authentication/Register";
+import ForgotPassword from "./Authentication/ForgetPW";
 import WelcomeMenu from "./Authentication/WelcomeMenu";
 import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
 
-import Register from "./Authentication/Register";
+
 
 function App() {
   return (
@@ -23,6 +25,7 @@ function App() {
           <Route path="/customers" element={<CustomerViewer/>} />
           <Route path = "/login" element={<Login />} />
           <Route path = "/register" element={<Register />} />
+          <Route path = "/forgot-password" element={<ForgotPassword />} />
           <Route path = "/settings" element={<SettingsViewer />} />
           {/* <Route path = "/wlcm" element={<WelcomeMenu />} /> */}
         </Routes>

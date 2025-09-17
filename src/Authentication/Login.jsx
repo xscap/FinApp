@@ -2,9 +2,9 @@ import React, { useState } from "react";
 import { FaApple } from "react-icons/fa";
 import { FcGoogle } from "react-icons/fc";
 import { FaEye, FaEyeSlash } from "react-icons/fa";
-import { useNavigate } from "react-router-dom"; // Navigation hook
+import { useNavigate, Link } from "react-router-dom"; // Navigation hook
 import "./login.css";
-import LogImg from "../assets/images/login_img.png"
+import LogImg from "../assets/images/login_img.png";
 // import "./UI_Auth/login.reponsive.css"
 
 export default function Login() {
@@ -59,11 +59,14 @@ export default function Login() {
             <div className="form-group">
               <div className="form-label-row">
                 <label htmlFor="password">Password</label>
-                <a href="/forgot-password" className="forgot-link">
+                <Link to="/forgot-password" className="forgot-link">
                   Forgot password?
-                </a>
+                </Link>
               </div>
-              <div className="password-wrapper" style={{ position: "relative" }}>
+              <div
+                className="password-wrapper"
+                style={{ position: "relative" }}
+              >
                 <input
                   id="password"
                   type={showPassword ? "text" : "password"}
@@ -127,7 +130,7 @@ export default function Login() {
 
       {/* Right Section: Image */}
       <div className="login-image">
-        <img src= {LogImg} alt="Login" />
+        <img src={LogImg} alt="Login" />
       </div>
     </div>
   );
