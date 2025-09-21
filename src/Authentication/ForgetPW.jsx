@@ -1,5 +1,5 @@
 import React, { useState } from "react";
-import { useNavigate } from "react-router-dom";
+import { useNavigate,Link } from "react-router-dom";
 import "./forgetpw.css";
 
 export default function ForgotPassword() {
@@ -50,7 +50,7 @@ export default function ForgotPassword() {
 
         <div className="back-to-login">
           <span>Remembered your password? </span>
-          <a href="/login">Login</a>
+          <Link to="/login" className="login-link">Back to Login</Link>
         </div>
       </div>
     </div>
