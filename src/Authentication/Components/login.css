@@ -1,0 +1,386 @@
+/* Container */
+body{
+   margin: 0;
+}
+.login-container {
+   font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+ display: flex;
+ width: 100%;
+ height: 100vh;
+ box-sizing: border-box;
+}
+
+/* Left section */
+.login-form-section {
+ flex: 1;
+ z-index: 1000;
+ display: flex;
+ flex-direction: column;
+ justify-content: center;
+ align-items: flex-start;
+}
+
+.brand-title {
+ font-size: 2rem;
+ font-weight: 600;
+   margin-left: 5%;
+ margin-bottom: 2.5rem;
+}
+
+.form-wrapper {
+ width: 100%;
+ box-sizing: border-box;
+ padding: 0 15% 0 25%;
+}
+
+.login-title {
+ font-size: 1.75rem;
+font-weight: 600;
+ margin-bottom: -0.5rem;
+ letter-spacing: 0.1rem;
+}
+
+.login-subtitle {
+   font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+ font-size: 0.9rem;
+ font-weight: 400;
+ margin-bottom: 2.5rem;
+ color: #444;
+}
+/* Form */
+.login-form {
+ width: 100%;
+}
+
+.form-group label {
+ display: block;
+ margin-bottom: 0.2rem;
+ color: #333;
+ font-size: 1rem;
+ font-weight: 600;
+}
+
+.form-group input{
+ width: 100%;
+ padding: 0.5rem 0.75rem;
+ font-size: 14px;
+box-sizing: border-box;
+ border: 1px solid #ccc;
+ border-radius: 0.5rem;
+}
+
+.form-label-row {
+ display: flex;
+ justify-content: space-between;
+ align-items: center;
+}
+
+.checkbox-group .forgot-link{
+ font-size: 0.9rem;
+ color: #1d4ed8;
+ font-weight: 500;
+ text-decoration: none;
+}
+
+.forgot-link:hover {
+ text-decoration: underline;
+}
+.eye-icon {
+position: absolute;
+right: 10px;
+bottom: 2px;
+margin-left: 0.5rem;
+margin-top: 1.5rem;
+ cursor: pointer;
+ font-size: 1.2rem;
+ color: #666;
+ transition: color 0.2s ease;
+}
+
+.eye-icon:hover {
+ color: #000;
+}
+
+
+/* Checkbox */
+.checkbox-group {
+ display: flex;
+ align-items: center;  
+ justify-content: space-between;        
+ margin-bottom: 0.5rem;
+ margin-top: 1.5rem;
+}
+.checkbox-text {
+   margin-left:0.3rem;
+}
+.checkbox-group input[type="checkbox"] {
+ width: 14px;  
+ height: 14px;
+ cursor: pointer;
+ transform: translateY(1.5px);
+}
+
+.checkbox-group label {
+ font-size: 0.8rem;
+ color: #444;
+}
+
+
+/* Button */
+.login-btn {
+ width: 100%;
+ background-color: #166534;
+ color: white;
+ padding: 0.6rem 1rem;
+ border: none;
+ border-radius: 0.3rem;
+ font-size:1rem;
+ cursor: pointer;
+ transition: background 0.2s ease;
+}
+
+.login-btn:hover {
+ background-color: #14532d;
+}
+
+/* Divider */
+.divider {
+ display: flex;
+ align-items: center;
+ margin: 2rem 0;
+ width: 100%;
+ color: #666;
+ font-weight: 600;
+}
+
+.divider hr {
+ flex-grow: 1;
+ border: none;
+ border-top: 2px solid #d1d5db;
+}
+
+.divider span {
+ margin: 0 0.75rem;
+}
+
+/* Social login */
+.social-login {
+ display: flex;
+ gap: 1rem;
+ width: 100%;
+}
+
+.social-btn {
+ flex: 1;
+ display: flex;
+ align-items: center;
+ justify-content: center;
+ padding: 0.6rem;
+ border: 1px solid #ccc;
+ border-radius: 0.75rem;
+ text-decoration: none;
+ color: #333;
+ font-weight: 500;
+ transition: background 0.2s ease;
+}
+
+.social-btn:hover {
+ background-color: #f3f4f6;
+}
+
+.social-btn .icon {
+ width: 1.5rem;
+ height: 1.5rem;
+ margin-right: 0.5rem;
+}
+
+/* Signup link */
+.signup-link {
+ margin-top: 1.5rem;
+ text-align: center;
+}
+
+.signup-link a {
+ color: #1d4ed8;
+ font-weight: 600;
+ text-decoration: none;
+}
+
+.signup-link a:hover {
+ text-decoration: underline;
+}
+
+/* Right section */
+.login-image {
+ flex: 1;
+ display: flex;
+ justify-content: flex-start;
+ align-items: flex-start;
+}
+
+.login-image img {
+ width: 100%;
+ height: 100%;
+ object-fit:cover;
+ object-position:left;
+}
+.password-wrapper {
+ display: flex;
+ align-items: center;
+  position: relative;
+}
+.password-wrapper input{
+   padding-right: 2rem;
+}
+.form-group{
+   margin-bottom: 1rem;
+}
+input::placeholder{
+font-weight: lighter;
+font-size: smaller;
+color: #ccc;
+}
+input[type="password"]::-ms-reveal,
+input[type="password"]::-webkit-credentials-auto-fill-button {
+  display: none;
+}
+input[type="password"] {
+  appearance: none;
+  -webkit-appearance: none;
+}
+
+@media screen and (max-width: 1024px){
+ .form-wrapper {
+   padding: 0;
+   padding-left: 10%;
+ }
+ 
+ .login-subtitle {
+   font-size: 0.85rem;
+ }
+   .checkbox-group label,.checkbox-group a {
+ font-size: 0.8rem;
+ margin: 0;
+}
+.social-btn{
+   padding: 0.2rem;
+   border-radius: 0.5rem;
+}
+.social-btn span{
+   font-size: 0.7rem;
+}
+.login-form-section {
+  flex: 6;
+  /* ...other styles... */
+}
+
+.login-image {
+  flex: 4;
+  /* ...other styles... */
+}
+.social-login{
+  gap: 5rem;
+}
+.login-image img{
+  object-position:calc(20%);
+  overflow:visible;
+  opacity: 0.8;
+}
+}
+@media screen and (max-width: 768px) {
+    .form-wrapper {
+      width:100%;
+      display: flex;
+      box-sizing: border-box;
+      padding: 0 3rem;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+    }
+
+ .login-subtitle {
+   font-size: 0.75rem;
+ }
+  .checkbox-group label,.checkbox-group a {
+  font-size: 0.8rem;
+  margin: 0;
+  }
+.social-btn{
+   padding: 0.1rem;
+}
+.social-btn span{
+   font-size: 0.7rem;
+}
+.login-image img{
+  object-position: center;
+  overflow:visible;
+  opacity: 0.6;
+}
+.main-section{
+   box-sizing: border-box;
+   background-color: #ffffffcc;
+   padding: 0 3rem 0 3rem;
+   width: 100vw;
+   border-radius: 0.5rem;
+    box-sizing: border-box;
+}
+
+.login-form-section{
+   position: absolute;
+    box-sizing: border-box;
+    width: 100vw;
+    min-height: 100vh;
+    display: flex;
+    justify-content: center;
+}
+.form-group input,.form-group label,
+  .login-btn,
+  .social-btn {
+    font-size: 0.8rem;
+  }
+  .divider{
+    color: #000;
+    margin: 1.25rem 0;
+    font-size: 1rem;
+  }
+  .brand-title {
+ font-size: 1.75rem;
+ font-weight: 600;
+ margin-top: 7%;
+ margin-bottom: 10%;
+}
+.login-title {
+ font-size: 1.5rem;
+ margin:0;
+ margin: 0.5rem 0 -0.5rem;
+}
+
+.login-subtitle {
+ font-size: 0.75rem;
+ margin-bottom: 2rem;
+}
+.checkbox-group .forgot-link,.checkbox-group label  {
+ font-size: 0.75rem;
+}
+
+.social-btn .icon {
+ width: 1.25rem;
+ height: 1.25rem;
+   padding: 0.2rem 0;
+}
+ .eye-icon{
+  font-size: 1.1rem;
+ }
+ .signup-link{
+  font-size: 0.8rem;
+ }
+}
+
+@media screen and (max-width: 375px){
+  .main-section {
+      padding: 0 2rem;
+    }
+    .checkbox-group label,.checkbox-group .forgot-link{
+  font-size: 0.7rem;
+}
+}
