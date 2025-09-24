@@ -2,9 +2,10 @@ import React, { useState } from "react";
 import { FaApple } from "react-icons/fa";
 import { FcGoogle } from "react-icons/fc";
 import { FaEye, FaEyeSlash } from "react-icons/fa";
-import { useNavigate } from "react-router-dom"; // Navigation hook
+import { useNavigate, Link } from "react-router-dom"; // Navigation hook
 import "./login.css";
-// import "./UI_Auth/login.reponsive.css"
+import LogImg from "../assets/images/login_img.png"
+
 
 export default function Login() {
   const [email, setEmail] = useState("");
@@ -14,7 +15,7 @@ export default function Login() {
 
   const navigate = useNavigate();
 
-  // Dummy credentials for testing
+  // Dummy credentials for testing - Later to be replaced with NestJS Authentication
   const dummyEmail = "test@example.com";
   const dummyPassword = "123456";
 
@@ -23,7 +24,7 @@ export default function Login() {
 
     if (email === dummyEmail && password === dummyPassword) {
       setError("");
-      navigate("/dashboard"); // Navigate to Dashboard Viewer
+      navigate("/dashboard"); // Navigated to Dashboard Viewer
     } else {
       setError("Invalid email or password!");
     }
@@ -58,11 +59,14 @@ export default function Login() {
             <div className="form-group">
               <div className="form-label-row">
                 <label htmlFor="password">Password</label>
-                <a href="/forgot-password" className="forgot-link">
+                <Link to="/forgot-password" className="forgot-link">
                   Forgot password?
-                </a>
+                </Link>
               </div>
-              <div className="password-wrapper" style={{ position: "relative" }}>
+              <div
+                className="password-wrapper"
+                style={{ position: "relative" }}
+              >
                 <input
                   id="password"
                   type={showPassword ? "text" : "password"}
@@ -119,14 +123,14 @@ export default function Login() {
           {/* Signup Link */}
           <div className="signup-link">
             <span>Don't have an account? </span>
-            <a href="/register">Sign up</a>
+            <Link to="/register" className="link-text">Register</Link>
           </div>
         </div>
       </div>
 
       {/* Right Section: Image */}
       <div className="login-image">
-        <img src="src/assets/images/login_img.png" alt="Login" />
+        <img src={LogImg} alt="Login" />
       </div>
     </div>
   );
