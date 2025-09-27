@@ -1,6 +1,4 @@
-/* Welcome.css */
-
-/* Typing effect for the title */
+/* Base styles for desktop */
 .welcome-title {
   font-size: 3rem;
   margin-bottom: 40px;
@@ -11,9 +9,9 @@
   animation: typing 3s steps(22) forwards, blinkCaret 0.75s step-end infinite;
   font-family: 'Courier New', Courier, monospace;
   color: #fff;
+  transition: font-size 0.2s, width 0.2s, margin-bottom 0.2s, padding 0.2s;
 }
 
-/* Typing keyframes */
 @keyframes typing {
   from { width: 0 }
   to { width: 22ch }
@@ -24,10 +22,8 @@
   50% { border-color: white }
 }
 
-/* Other container and button styles */
-
 .welcome-container {
-  height: 100vh;
+  min-height: 100vh;
   display: flex;
   flex-direction: column;
   justify-content: center;
@@ -35,13 +31,16 @@
   background: linear-gradient(135deg, #6a11cb, #2575fc);
   color: #fff;
   text-align: center;
-  padding: 20px;
+  padding: 24px 32px;
   font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  transition: padding 0.2s;
 }
 
 .button-group {
   display: flex;
   gap: 20px;
+  flex-wrap: wrap;
+  transition: gap 0.2s, flex-direction 0.2s;
 }
 
 .animated-button {
@@ -52,7 +51,7 @@
   border-radius: 30px;
   cursor: pointer;
   font-weight: 600;
-  transition: background-color 0.3s ease, color 0.3s ease;
+  transition: background-color 0.2s, color 0.2s, transform 0.2s;
   box-shadow: 0 5px 15px rgba(0,0,0,0.3);
 }
 
@@ -64,7 +63,6 @@
   background-color: #ffffffaa;
   color: #2575fc;
 }
-
 .login-button:hover {
   background-color: #ffffff;
   color: #0056b3;
@@ -75,28 +73,16 @@
   color: #fff;
   box-shadow: 0 5px 15px rgba(37,117,252,0.6);
 }
-
 .register-button:hover {
   background-color: #1a4fcc;
   box-shadow: 0 5px 20px rgba(26,79,204,0.8);
 }
 
 @keyframes buttonHoverPulse {
-  0% {
-    transform: scale(1);
-    box-shadow: 0 0 5px rgba(0,0,0,0.2);
-  }
-  50% {
-    transform: scale(1.05);
-    box-shadow: 0 0 15px rgba(0,123,255,0.6);
-  }
-  100% {
-    transform: scale(1);
-    box-shadow: 0 0 5px rgba(0,0,0,0.2);
-  }
+  0%   { transform: scale(1); box-shadow: 0 0 5px rgba(0,0,0,0.2);}
+  50%  { transform: scale(1.05); box-shadow: 0 0 15px rgba(0,123,255,0.6);}
+  100% { transform: scale(1);   box-shadow: 0 0 5px rgba(0,0,0,0.2);}
 }
-
-/* Loading overlay while redirecting */
 
 .loading-overlay {
   display: flex;
@@ -106,7 +92,6 @@
   color: white;
   font-size: 1.2rem;
 }
-
 .loading-spinner {
   border: 5px solid rgba(255, 255, 255, 0.3);
   border-top: 5px solid white;
@@ -115,8 +100,56 @@
   height: 48px;
   animation: spin 1s linear infinite;
 }
+@keyframes spin { to { transform: rotate(360deg); }}
 
-/* Spinner animation */
-@keyframes spin {
-  to { transform: rotate(360deg); }
+
+/* Tablet styles: 601px - 900px */
+@media (min-width: 601px) {
+  .welcome-title {
+    font-size: 2rem;
+    width: 18ch;
+    animation: typing 2s steps(18) forwards, blinkCaret 0.75s step-end infinite;
+    margin-bottom: 32px;
+    padding: 0 4px;
+  }
+  .welcome-container {
+    padding: 16px 12px;
+  }
+  .button-group {
+    gap: 12px;
+    flex-direction: row;
+  }
+  .animated-button {
+    font-size: 1rem;
+    padding: 12px 18px;
+    border-radius: 24px;
+  }
+}
+
+/* Mobile styles: ≤600px */
+@media (max-width: 600px) {
+  .welcome-title {
+    font-size: 1.4rem;
+    width: 12ch;
+    animation: typing 1s steps(12) forwards, blinkCaret 0.75s step-end infinite;
+    margin-bottom: 18px;
+    padding: 0 2px;
+  }
+  .welcome-container {
+    padding: 4px 4px;
+    min-height: 100vh;
+  }
+  .button-group {
+    flex-direction: column;
+    gap: 8px;
+    width: 100%;
+    align-items: stretch;
+    margin-top: 10px;
+  }
+  .animated-button {
+    font-size: 0.95rem;
+    padding: 10px 0;
+    width: 100%;
+    border-radius: 18px;
+  }
 }
