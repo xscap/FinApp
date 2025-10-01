@@ -1,88 +1,185 @@
-.invoice-modal-overlay {
+/* Overlay */
+.modal-overlay {
   position: fixed;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 100%;
+  inset: 0;
   background: rgba(0, 0, 0, 0.5);
   display: flex;
-  align-items: center;
   justify-content: center;
-  z-index: 1000;
+  align-items: center;
+  z-index: 999;
 }
 
-.invoice-modal {
+/* Modal */
+.modal-content {
   background: #fff;
-  border-radius: 10px;
-  padding: 20px;
-  width: 380px;
-  max-width: 95%;
-  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+  border-radius: 16px;
+  padding: 24px;
+  width: 95%;
+  max-width: 480px;
+  box-shadow: 0 6px 20px rgba(0, 0, 0, 0.15);
+  font-family: "Segoe UI", Arial, sans-serif;
+  animation: fadeIn 0.25s ease-in-out;
+  overflow-y: auto;
+  max-height: 90vh;
 }
 
-.invoice-modal-title {
+/* Animation */
+@keyframes fadeIn {
+  from { opacity: 0; transform: translateY(-10px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+
+/* Header */
+.modal-content h2 {
   font-size: 20px;
-  font-weight: bold;
-  margin-bottom: 15px;
-  color: #000;
+  font-weight: 700;
+  text-align: center;
+  margin-bottom: 20px;
+  color: #1a1a1a;
 }
 
-.invoice-modal-form {
+/* Form */
+form {
   display: flex;
   flex-direction: column;
-  gap: 12px;
+  gap: 14px;
 }
 
-.invoice-modal-form input,
-.invoice-modal-form select {
-  width: 100%;
-  padding: 10px;
-  border: 1px solid #ddd;
-  border-radius: 6px;
+/* Labels + Inputs */
+label {
   font-size: 14px;
+  font-weight: 500;
+  margin-bottom: 4px;
+  color: #333;
+  display: block;
+}
+
+input,
+select,
+textarea {
+  width: 100%;
+  padding: 10px 12px;
+  border-radius: 8px;
+  border: 1px solid #ccc;
+  font-size: 14px;
+  transition: border-color 0.2s;
+}
+
+input:focus,
+select:focus,
+textarea:focus {
+  border-color: #007bff;
   outline: none;
 }
 
-.invoice-modal-form input:focus,
-.invoice-modal-form select:focus {
-  border-color: #000;
+textarea {
+  min-height: 70px;
+  resize: vertical;
 }
 
-.invoice-modal-row {
+/* Items Section */
+.items-list {
   display: flex;
+  flex-wrap: wrap;
   gap: 10px;
 }
 
-.invoice-modal-actions {
+.items-list button {
+  padding: 8px 12px;
+  border: 1px solid #ddd;
+  background: #f9f9f9;
+  border-radius: 8px;
+  cursor: pointer;
+  font-size: 13px;
+  transition: all 0.2s;
+}
+
+.items-list button:hover {
+  background: #f1f1f1;
+  border-color: #bbb;
+}
+
+/* Selected Items */
+.selected-items {
+  margin-top: 10px;
+  border-top: 1px solid #eee;
+  padding-top: 10px;
+}
+
+.selected-items h4 {
+  font-size: 15px;
+  font-weight: 600;
+  margin-bottom: 8px;
+  color: #333;
+}
+
+.selected-item {
   display: flex;
   justify-content: space-between;
-  margin-top: 15px;
-}
-
-.invoice-save-btn {
-  background: #000;
-  color: #fff;
-  border: none;
-  padding: 10px 18px;
+  align-items: center;
+  margin-bottom: 6px;
+  padding: 8px;
   border-radius: 6px;
-  font-size: 14px;
-  cursor: pointer;
+  background: #fafafa;
 }
 
-.invoice-cancel-btn {
-  background: #e5e5e5;
+.selected-item input {
+  width: 60px;
+  padding: 6px;
+  border: 1px solid #ccc;
+  border-radius: 6px;
+  text-align: center;
+}
+
+/* Totals Box */
+.totals {
+  background: #fafafa;
+  padding: 12px 14px;
+  border-radius: 10px;
+  border: 1px solid #eee;
+  margin-top: 6px;
+}
+
+.totals p {
+  margin: 4px 0;
+  font-size: 14px;
+  color: #555;
+}
+
+.totals h3 {
+  margin: 8px 0 0;
+  font-size: 16px;
+  font-weight: 700;
   color: #000;
-  border: none;
+}
+
+/* Buttons */
+.modal-actions {
+  display: flex;
+  justify-content: flex-end;
+  gap: 12px;
+  margin-top: 20px;
+}
+
+.modal-actions button {
   padding: 10px 18px;
-  border-radius: 6px;
-  font-size: 14px;
+  border-radius: 8px;
+  border: none;
   cursor: pointer;
+  font-weight: 600;
+  font-size: 14px;
+  transition: all 0.2s;
 }
 
-.invoice-save-btn:hover {
-  background: #333;
+.save-btn {
+  background: #0056d2;
+  color: #fff;
 }
+.save-btn:hover { background: #0041a8; }
 
-.invoice-cancel-btn:hover {
-  background: #ccc;
+.cancel-btn {
+  background: #f1f1f1;
+  color: #333;
 }
+.cancel-btn:hover { background: #e0e0e0; }
+
